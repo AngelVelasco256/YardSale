@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #ffffff;
+            --black: #000000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #d337b9;
+            --ssm: 12px;
+            --sm: 16px;
+            --md: 22px;
+            --lg: 28px;
+        }
+        body {
+            margin: 0;
+            font-family: "Quicksand", sans-serif;
+        }
+        .my-order {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .my-order-container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+        }
+        .title {
+            font-size: var(--lg);
+            margin-bottom: 40px;
+        }
+        .my-order-total p {
+            margin: 4px;
+        }
+        .my-order-total {
+            background-color: var(--text-input-field);
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+        .my-order-total .total-info p:first-child {
+            font-weight: bold;
+        }
+        .my-order-total .total-info p:last-child {
+            font-weight: lighter;
+        }
+        .my-order-total .total-price p {
+            font-weight: bold;
+        }
+        .item-cart {
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            gap: 16px;
+            margin-bottom: 12px;
+            align-items: center;
+        }
+        .item-cart figure {
+            margin: 0;
+            object-fit: cover;
+        }
+        .item-cart figure img {
+            width: 70px;
+            border-radius: 16px;
+        }
+        .item-cart p:nth-child(2) {
+            font-size: var(--sm);
+            font-weight: lighter;
+        }
+        .item-cart p:nth-child(3) {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="my-order">
+        <div class="my-order-container">
+            <h1 class="title">My order</h1>
+            <div class="my-order-total">
+                <div class="total-info">
+                    <p>19 March 2020</p>
+                    <p>6 Articles</p>
+                </div>
+                <div class="total-price">
+                    <p>$ 560.00</p>
+                </div>
+            </div>
+            <!-- grid with items order -->
+            <div class="item-cart">
+                <figure>
+                    <img src="../Assets/images/pexels-mlkbnl-8442158 (2).jpg" alt="">
+                </figure>
+                <p>Pink Table</p>
+                <p>$ 150.00</p>
+            </div>
+            <div class="item-cart">
+                <figure>
+                    <img src="../Assets/images/pexels-mlkbnl-8442158 (2).jpg" alt="">
+                </figure>
+                <p>Pink Table</p>
+                <p>$ 150.00</p>
+            </div>
+            <div class="item-cart">
+                <figure>
+                    <img src="../Assets/images/pexels-mlkbnl-8442158 (2).jpg" alt="">
+                </figure>
+                <p>Pink Table</p>
+                <p>$ 150.00</p>
+            </div>
+            <div class="item-cart">
+                <figure>
+                    <img src="../Assets/images/pexels-mlkbnl-8442158 (2).jpg" alt="">
+                </figure>
+                <p>Pink Table</p>
+                <p>$ 150.00</p>
+            </div>
+            <div class="item-cart">
+                <figure>
+                    <img src="../Assets/images/pexels-mlkbnl-8442158 (2).jpg" alt="">
+                </figure>
+                <p>Pink Table</p>
+                <p>$ 150.00</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
