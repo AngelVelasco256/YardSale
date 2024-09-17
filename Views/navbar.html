@@ -23,25 +23,107 @@
             margin: 0;
             font-family: "Quicksand", sans-serif;
         }
+        a {
+            text-decoration: none;
+        }
+        .navbar {
+            height: 75px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* margin: 0 24px; */
+            width: 98%;
+            margin-right: 1%;
+            margin-left: 1%
+            /* Con esta configuracion ocupa el 100% del espacio calculando para no sobrepasarlo con mas del 100% y el paddin y/o margin */
+        }
+        .menu {
+            display: none;
+        }
+        .logo {
+            width: 150px;
+        }
+        .left-navbar {
+            display: flex;
+            align-items: center;
+        }
+        .left-navbar .menu-navbar,
+        .right-navbar .cart-navbar {
+            list-style: none;
+            display: flex;
+        }
+        .right-navbar .cart-navbar {
+            align-items: center;
+        }
+        .left-navbar .menu-navbar a{
+            color: var(--very-light-pink);
+            padding: 0 8px;
+        }
+        .left-navbar .menu-navbar a:hover {
+            color: var(--hospital-green);
+            border: 1px var(--hospital-green) solid;
+            border-radius: 4px;
+        }
+        .cart-navbar .cart-notification {
+            position: relative;
+        }
+        .cart-navbar .cart-notification p {
+            width: 16px;
+            height: 16px;
+            background-color: var(--hospital-green);
+            border-radius: 50%;
+            position: absolute;
+            top: -20px;
+            right: -5px;
+            font-weight: bold;
+            font-size: var(--ssm);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cart-navbar .email-navbar {
+            margin-right: 12px;
+        }
     </style>
 </head>
 <body>
     <nav class="navbar">
+        <img class="menu" src="../Assets/icons/icon_menu.svg" alt="">
         <div class="left-navbar">
             <a href="#">
-                <img src="../Assets/logos/logo_yard_sale.svg" alt="logo_yard_sale">
+                <img class="logo" src="../Assets/logos/logo_yard_sale.svg" alt="logo_yard_sale">
             </a>
             <ul class="menu-navbar">
                 <li>
                     <a href="#">All</a>
                 </li>
+                <li>
+                    <a href="#">Clothes</a>
+                </li>
+                <li>
+                    <a href="#">Electronics</a>
+                </li>
+                <li>
+                    <a href="#">Furniture</a>
+                </li>
+                <li>
+                    <a href="#">Toys</a>
+                </li>
+                <li>
+                    <a href="#">Others</a>
+                </li>
             </ul>
         </div>
         <div class="right-navbar">
-            <p>email@something.com</p>
-            <a href="#">
-                <img src="../Assets/icons/icon_shopping_cart_notification.svg" alt="cart icon">
-            </a>
+            <ul class="cart-navbar">
+                <li class="email-navbar">
+                    email@something.com
+                </li>
+                <li class="cart-notification">
+                    <img src="../Assets/icons/icon_shopping_cart.svg" alt="">
+                    <p>2</p>
+                </li>
+            </ul>
         </div>
     </nav>
 </body>
