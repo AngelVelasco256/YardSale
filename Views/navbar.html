@@ -27,6 +27,7 @@
             text-decoration: none;
         }
         .navbar {
+            border-bottom: 1px solid var(--hospital-green);
             height: 75px;
             display: flex;
             justify-content: space-between;
@@ -83,6 +84,21 @@
         }
         .cart-navbar .email-navbar {
             margin-right: 12px;
+        }
+        /* MediasQueries */
+        @media (width <= 640px) {
+            .menu {
+                display: block;
+            }
+            .left-navbar .menu-navbar {
+                display: none;
+            }
+            .right-navbar .cart-navbar .email-navbar {
+                display: none;
+            }
+            .right-navbar .cart-navbar {
+                padding: 0;
+            }
         }
     </style>
 </head>
