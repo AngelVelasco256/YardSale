@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Product</title>
+    <style>
+        :root {
+            --white: #ffffff;
+            --black: #000000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #d337b9;
+            --ssm: 12px;
+            --sm: 16px;
+            --md: 22px;
+            --lg: 28px;
+        }
+        body {
+            margin: 0;
+            font-family: "Quicksand", sans-serif;
+        }
+        p {
+            margin: 0;
+        }
+        .product {
+            width: 360px;
+            position: absolute;
+            right: 0;
+            height: 100vh;
+            background-color: var(--text-input-field);
+        }
+        .product .close-image {
+            border-radius: 50%;
+            background-color: rgb(0, 0, 0);
+            cursor: pointer;
+            position: absolute;
+            top: 8px;
+            left: 8px;
+        }
+        .product .product-image {
+            width: 100%;
+            height: 360px;
+            border-radius: 16px 0 0 16px;
+            object-fit: cover;
+        }
+        .product-info {
+            width: 88%;
+            margin: 0 6%;
+        }
+        .product-info .product-price {
+            font-size: var(--md);
+            font-weight: bold;
+            margin: 24px 0 4px 0;
+        }
+        .product-info .product-title {
+            font-size: var(--md);
+            margin: 0 0 36px 0;
+        }
+        .product-info .product-description {
+            font-size: var(--sm);
+        }
+        .primary-button {
+            background-color: var(--hospital-green);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            font-size: var(--md);
+            font-weight: bold;
+            width: 94%;
+            height: 40px;
+            cursor: pointer;
+        }
+        .add-to-cart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 3%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        /* Medias Queries */
+        @media (width <= 640px) {
+            .product {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside class="product">
+        <img src="../Assets/icons/icon_close.png" alt="close image" class="close-image">
+        <img class="product-image" src="../Assets/images/pexels-mlkbnl-8442158 (2).jpg" alt="Product image">
+        <div class="product-info">
+            <p class="product-price">$ 120.00</p>
+            <p class="product-title">Pink Table</p>
+            <p class="product-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus hic magnam blanditiis ipsam tempore iste deserunt vitae delectus neque eveniet dolores mollitia asperiores itaque corrupti eos reiciendis, minima voluptatum dicta!
+            </p>
+        </div>
+        <button class="primary-button add-to-cart">
+            <img src="../Assets/icons/bt_add_to_cart.svg" alt="img cart">
+            <p>Add to cart</p>
+        </button>
+    </aside>
+</body>
+</html>
