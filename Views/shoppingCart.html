@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <title>Product</title>
+    <title>Shopping cart</title>
     <style>
         :root {
             --white: #ffffff;
@@ -28,41 +28,63 @@
         }
         nav {
             width: 100%;
-            height: 75px;
+            height: 60px;
             display: flex;
+            gap: 14px;
+            justify-content: flex-start;
             align-items: center;
             border-bottom: 1px solid var(--hospital-green);
         }
         nav img {
-            width: 35px;
-            margin-left: 24px;
+            width: 16px;
+            margin-left: 12px;
+            transform: rotate(180deg);
         }
         nav p {
+            font-size: var(--md);
             font-weight: bold;
-            margin-left: 28%;
         }
         .product {
             width: 360px;
             position: absolute;
             right: 0;
             height: 100vh;
-            background-color: var(--text-input-field);
         }
         .cart {
             width: 80%;
-            text-align: center;
             margin: 24px 10% 0 10%;
         }
         .cart .cart-item {
             display: grid;
             grid-template-columns: auto 1fr auto auto ;
             align-items: center;
+            text-align: center;
             margin-bottom: 24px;
+            gap: 16px;
         }
         .cart-item img:first-child{
             width: 75px;
             height: 75px;
             margin: 0;
+            border-radius: 16px;
+        }
+        .cart-item p:nth-child(3) {
+            font-weight: bold;
+        }
+        .my-order-total p {
+            font-weight: bold;
+            padding: 0 12px;
+        }
+        .my-order-total {
+            width: 100%;
+            height: 60px;
+            margin: 24px 0 0 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--text-input-field);
+            border-radius: 8px;
         }
         .primary-button {
             background-color: var(--hospital-green);
@@ -71,15 +93,10 @@
             border-radius: 4px;
             font-size: var(--md);
             font-weight: bold;
-            width: 94%;
-            height: 40px;
+            width: 80%;
+            height: 60px;
             cursor: pointer;
-        }
-        .add-to-cart {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 3%;
+            margin: 0 10% 8px 10%;
             position: absolute;
             bottom: 0;
             right: 0;
@@ -90,49 +107,52 @@
                 width: 100%;
             }
         }
-    </style>
+        </style>
 </head>
 <body>
     <aside class="product">
         <nav>
-            <img src="../Assets/icons/icon_menu.svg" alt="menu icon">
+            <img src="../Assets/icons/flechita.svg" alt="menu icon">
             <p>Shopping Cart</p>
         </nav>
         <div class="cart">
             <div class="cart-item">
-                    <img src="../Assets/images/pexels-mlkbnl-8442158 (2).jpg" alt="Product image">
+                <img src="../Assets/images/pexels-mlkbnl-8442158 (2).jpg" alt="Product image">
                 <p class="cart-item-name">Pink Table</p>
                 <p class="cart-item-price">$ 120.00</p>
                 <img src="../Assets/icons/icon_close.png" alt="delete item" class="cart-delete">
             </div>
             <div class="cart-item">
-                    <img src="../Assets/images/pexels-mlkbnl-8442158 (2).jpg" alt="Product image">
+                <img src="../Assets/images/pexels-mlkbnl-8442158 (2).jpg" alt="Product image">
                 <p class="cart-item-name">Pink Table</p>
                 <p class="cart-item-price">$ 120.00</p>
                 <img src="../Assets/icons/icon_close.png" alt="delete item" class="cart-delete">
             </div>
             <div class="cart-item">
-                    <img src="../Assets/images/pexels-mlkbnl-8442158 (2).jpg" alt="Product image">
+                <img src="../Assets/images/pexels-mlkbnl-8442158 (2).jpg" alt="Product image">
                 <p class="cart-item-name">Pink Table</p>
                 <p class="cart-item-price">$ 120.00</p>
                 <img src="../Assets/icons/icon_close.png" alt="delete item" class="cart-delete">
             </div>
             <div class="cart-item">
-                    <img src="../Assets/images/pexels-mlkbnl-8442158 (2).jpg" alt="Product image">
+                <img src="../Assets/images/pexels-mlkbnl-8442158 (2).jpg" alt="Product image">
                 <p class="cart-item-name">Pink Table</p>
                 <p class="cart-item-price">$ 120.00</p>
                 <img src="../Assets/icons/icon_close.png" alt="delete item" class="cart-delete">
             </div>
             <div class="cart-item">
-                    <img src="../Assets/images/pexels-mlkbnl-8442158 (2).jpg" alt="Product image">
+                <img src="../Assets/images/pexels-mlkbnl-8442158 (2).jpg" alt="Product image">
                 <p class="cart-item-name">Pink Table</p>
                 <p class="cart-item-price">$ 120.00</p>
                 <img src="../Assets/icons/icon_close.png" alt="delete item" class="cart-delete">
+            </div>
+            <div class="my-order-total">
+                <p>Total</p>
+                <p>$ 560.00</p>
             </div>
         </div>
         <button class="primary-button add-to-cart">
-            <img src="../Assets/icons/bt_add_to_cart.svg" alt="img cart">
-            <p>Add to cart</p>
+            Checkout
         </button>
     </aside>
 </body>
